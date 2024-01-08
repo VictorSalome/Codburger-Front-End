@@ -1,10 +1,5 @@
 import React from 'react'
-
-
 import PropTypes from 'prop-types'
-
-
-
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
@@ -16,12 +11,30 @@ import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { ProductsImg } from './styles';
+import { ProductsImg, ReactSelectStyled } from './styles';
+import api from '../../../services/api';
+import status from './order-status';
 
 
 
 const Row = ({ row }) => {
     const [open, setOpen] = React.useState(false);
+    const [isLoading, setIsLoading] = React.useState(false);
+
+    const setNewStatus = async (id, status) => {
+        setIsLoading(true)
+
+        try {
+            await api.put(`orders/${id}`, { status })
+        } catch (error) {
+            console.log(error)
+        } finally {
+            setIsLoading(false)
+        }
+    }
+
+
+
 
     return (
         <React.Fragment>
@@ -40,7 +53,20 @@ const Row = ({ row }) => {
                 </TableCell>
                 <TableCell>{row.name}</TableCell>
                 <TableCell>{row.date}</TableCell>
-                <TableCell>{row.status}</TableCell>
+
+                <TableCell>
+                    <ReactSelectStyled options={status}
+                        menuPortalTarget={document.body}
+                        placeholder="Status"
+                        defaultValue={
+                            status.find((option) => option.value === row.status) || null
+                        }
+                        onChange={(newStatus) =>
+                            setNewStatus(row.orderId, newStatus.value)
+                        }
+                        isLoading={isLoading}
+                    />
+                </TableCell>
                 <TableCell></TableCell>
 
             </TableRow>
