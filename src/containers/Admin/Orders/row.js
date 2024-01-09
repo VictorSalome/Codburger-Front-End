@@ -17,15 +17,18 @@ import status from './order-status';
 
 
 
-const Row = ({ row }) => {
+const Row = ({ row, setOrders, orders }) => {
     const [open, setOpen] = React.useState(false);
     const [isLoading, setIsLoading] = React.useState(false);
 
     const setNewStatus = async (id, status) => {
         setIsLoading(true)
-
         try {
             await api.put(`orders/${id}`, { status })
+            const newOrders = orders.map(order => {
+                return order._id === id ? { ...order, status } : order
+            })
+            setOrders(newOrders)
         } catch (error) {
             console.log(error)
         } finally {
@@ -55,7 +58,7 @@ const Row = ({ row }) => {
                 <TableCell>{row.date}</TableCell>
 
                 <TableCell>
-                    <ReactSelectStyled options={status}
+                    <ReactSelectStyled options={status.filter( option => option.value !== 'Todos') }
                         menuPortalTarget={document.body}
                         placeholder="Status"
                         defaultValue={
@@ -110,6 +113,8 @@ const Row = ({ row }) => {
 }
 
 Row.propTypes = {
+    setOrders: PropTypes.func.isRequired,
+    orders: PropTypes.array.isRequired,
     row: PropTypes.shape({
         name: PropTypes.string.isRequired,
         orderId: PropTypes.string.isRequired,
