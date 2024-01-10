@@ -20,6 +20,7 @@ const Routes = () => {
 
                 <PrivateRoute component={Admin} path={paths.Order} isAdmin />
                 <PrivateRoute component={Admin} path={paths.ProductsList} isAdmin />
+                <PrivateRoute component={Admin} path={paths.NewProduct} isAdmin />
             </Switch>
         </Router>
     )

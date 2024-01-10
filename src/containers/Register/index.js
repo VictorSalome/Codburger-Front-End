@@ -3,8 +3,8 @@ import * as Yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { Link } from 'react-router-dom'
 
-import { Button } from '../../components'
-import { Container, RegisterImage, ContainerItens, Label, Input, SignInLink, ErrorMessage } from './styles'
+import { Button, ErrorMessage } from '../../components'
+import { Container, RegisterImage, ContainerItens, Label, Input, SignInLink } from './styles'
 
 import RegisterImg from '../../assets/register-image.svg'
 import Logo from '../../assets/Logo.svg'

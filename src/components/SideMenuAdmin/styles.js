@@ -34,14 +34,12 @@ export const ItemContainer = styled.div`
 
 
 export const ListLink = styled(Link)`
-font - style: normal;
-font - weight: normal;
-font - size: 16px;
-line - height: 19px;
-color: #ffffff;
-text - decoration: none;
-margin - left: 8px;
-
-
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 8px;
 
 `
