@@ -14,6 +14,7 @@ import {
 } from './styles.js'
 
 import { Button } from '../Button';
+import paths from '../../constants/paths.js';
 
 
 export const CardProduct = ({ product }) => {
@@ -30,7 +31,7 @@ export const CardProduct = ({ product }) => {
                 </ProductContainer>
                 <Button onClick={() => {
                     putProductInCart(product)
-                    push('/carrinho')
+                    push(paths.Cart)
                 }}>Adicionar</Button>
             </DivMain>
         </Container>

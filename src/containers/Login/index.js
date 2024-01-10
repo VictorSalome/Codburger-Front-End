@@ -9,6 +9,7 @@ import Logo from '../../assets/Logo.svg';
 import api from '../../services/api';
 import { toast } from 'react-toastify';
 import { useUser } from '../../hooks/UserContext';
+import paths from '../../constants/paths';
 
 export const Login = () => {
     const history = useHistory();
@@ -38,10 +39,10 @@ export const Login = () => {
 
             setTimeout(() => {
                 if (data.admin) {
-                    history.push('/pedidos');
+                    history.push(paths.Order);
 
                 } else {
-                    history.push('/');
+                    history.push(paths.Home);
                 }
 
             }, 1000);
@@ -70,7 +71,7 @@ export const Login = () => {
                         Sign In
                     </Button>
                 </form>
-                <SignInLink>Não possui conta ? <Link style={{ color: 'white' }} to='/cadastro'>Sign Up</Link></SignInLink>
+                <SignInLink>Não possui conta ? <Link style={{ color: 'white' }} to={paths.Register}>Sign Up</Link></SignInLink>
             </ContainerItens>
         </Container>
     );

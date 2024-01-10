@@ -12,6 +12,7 @@ import Logo from '../../assets/Logo.svg'
 import api from '../../services/api'
 
 import { toast } from 'react-toastify'
+import paths from '../../constants/paths'
 
 
 
@@ -47,7 +48,7 @@ export const Register = () => {
                 },
                 { validateStatus: () => true }
             )
-           
+
 
             if (status === 201 || status === 200) {
                 toast.success('Cadastro criado com sucesso')
@@ -97,7 +98,7 @@ export const Register = () => {
                         Sign Up
                     </Button>
                 </form>
-                <SignInLink>Já possui conta? <Link style={{ color: 'white' }} to='/login'>Sign In</Link></SignInLink>
+                <SignInLink>Já possui conta? <Link style={{ color: 'white' }} to={paths.Login}>Sign In</Link></SignInLink>
 
             </ContainerItens>
 

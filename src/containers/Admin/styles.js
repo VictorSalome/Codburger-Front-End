@@ -5,7 +5,14 @@ export const Container = styled.div`
     min-height: 100vh;
     width: 100vw;
     background-color: #efefef;
-    justify-content: space-between;
+    justify-content: flex-start;
+
+
+`
+
+export const ContainerItems = styled.div`
+padding: 20px;
+   
 
 
 `

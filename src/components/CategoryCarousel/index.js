@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import Category from '../../assets/Category.svg'
+import paths from '../../constants/paths'
 
 import { Container, CategoryImg, ContainerItems, Image, Button } from './styles'
 
@@ -44,10 +45,13 @@ export const CategoryCarousel = () => {
                             <Image src={category.url} alt='foto da categoria' />
                             <Button
                                 to={{
-                                    pathname: '/produtos',
+                                    pathname: paths.Products,
                                     state: { categoryId: category.id }
                                 }}
-                            > {category.name}</Button>
+                            >
+                                {category.name}
+                            </Button>
+
                         </ContainerItems>
                     ))
                 }

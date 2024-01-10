@@ -5,6 +5,8 @@ import { useUser } from '../../hooks/UserContext'
 import Person from '../../assets/profile.svg'
 import Cart from '../../assets/cart.svg'
 
+import paths from '../../constants/paths'
+
 import {
     Container,
     ContainerLeft,
@@ -20,25 +22,25 @@ export const Header = () => {
     const { logout, userData } = useUser()
     const logoutUser = () => {
         logout()
-        push('/login')
+        push(paths.Login)
     }
     return (
         <Container>
             <ContainerLeft>
                 <PageLink
-                    onClick={() => push('/')}
-                    isActive={pathname === '/'}>
+                    onClick={() => push(paths.Home)}
+                    isActive={pathname === paths.Home}>
                     Home
                 </PageLink>
                 <PageLink
-                    onClick={() => push('/produtos')}
-                    isActive={pathname.includes('produtos')}>
+                    onClick={() => push(paths.Products)}
+                    isActive={pathname.includes(paths.Products)}>
                     Ver Produtos
                 </PageLink>
             </ContainerLeft>
 
             <ContainerRight>
-                <PageLink onClick={() => push('/carrinho')}>
+                <PageLink onClick={() => push(paths.Cart)}>
                     <img src={Cart} alt="carrinho" />
                 </PageLink>
                 <Line></Line>

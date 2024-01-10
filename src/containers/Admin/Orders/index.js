@@ -70,7 +70,7 @@ const Orders = () => {
 
 
 
-    }, [orders])
+    }, [orders, activeStatus])
 
     const handleStatus = (status) => {
         if (status.id === 1) {
