@@ -56,13 +56,12 @@ const Row = ({ row, setOrders, orders }) => {
 
         setNewStatus(row.orderId, 'Cancelado');
 
-        // Show toast message for 2 seconds
         toast.info('Pedido cancelado', {
             autoClose: 2000
         });
 
-        // Reload the page em 2 seconds
         setTimeout(() => {
+            // eslint-disable-next-line no-restricted-globals
             location.reload();
         }, 3000);
 

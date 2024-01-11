@@ -91,7 +91,7 @@ const ListProducts = () => {
                                     <EditIconStyles onClick={() => editProduct(product)} />
                                 </TableCell>
                                 <TableCell>
-                                    <DeleteIcon onClick={() => deleteProduct(product)} />
+                                    <DeleteIcon style={{ cursor: 'pointer' }} onClick={() => deleteProduct(product)} />
                                 </TableCell>
 
                             </TableRow>

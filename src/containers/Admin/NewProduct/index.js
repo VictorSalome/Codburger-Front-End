@@ -61,10 +61,6 @@ const NewProduct = () => {
 
         }, 2000);
 
-
-        console.log(productDataFormData)
-
-
     }
 
     useEffect(() => {
@@ -91,7 +87,7 @@ const NewProduct = () => {
                 </div>
                 <div>
                     <Label>Preço</Label>
-                    <Input type='number' {...register('price')} />
+                    <Input type='number'{...register('price')} />
                     <ErrorMessage>{errors.price?.message}</ErrorMessage>
                 </div>
 
@@ -135,7 +131,7 @@ const NewProduct = () => {
                     <ErrorMessage>{errors.category?.message}</ErrorMessage>
                 </div>
 
-                <ButtonStyles type='submit'>Adicionar produto</ButtonStyles>
+                <ButtonStyles >Adicionar produto</ButtonStyles>
             </form>
         </Container >
 
