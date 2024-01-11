@@ -14,12 +14,15 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { ProductsImg, ReactSelectStyled } from './styles';
 import api from '../../../services/api';
 import status from './order-status';
-
+import formatCurrency from '../../../utils/formatCurrency';
+import CloseIcon from '@mui/icons-material/Close';
+import { toast } from 'react-toastify';
 
 
 const Row = ({ row, setOrders, orders }) => {
     const [open, setOpen] = React.useState(false);
     const [isLoading, setIsLoading] = React.useState(false);
+
 
     const setNewStatus = async (id, status) => {
         setIsLoading(true)
@@ -36,7 +39,35 @@ const Row = ({ row, setOrders, orders }) => {
         }
     }
 
+    const calculateTotalPrice = (row) => {
+        let totalPrice = 0;
+        row.products.forEach((product) => {
+            totalPrice += product.price;
+        });
+        return totalPrice;
+    };
 
+    const totalPrice = calculateTotalPrice(row);
+
+
+
+
+    const cancelOrder = () => {
+
+        setNewStatus(row.orderId, 'Cancelado');
+
+        // Show toast message for 2 seconds
+        toast.info('Pedido cancelado', {
+            autoClose: 2000
+        });
+
+        // Reload the page em 2 seconds
+        setTimeout(() => {
+            location.reload();
+        }, 3000);
+
+
+    }
 
 
     return (
@@ -58,7 +89,7 @@ const Row = ({ row, setOrders, orders }) => {
                 <TableCell>{row.date}</TableCell>
 
                 <TableCell>
-                    <ReactSelectStyled options={status.filter( option => option.value !== 'Todos') }
+                    <ReactSelectStyled options={status.filter(option => option.value !== 'Todos')}
                         menuPortalTarget={document.body}
                         placeholder="Status"
                         defaultValue={
@@ -70,8 +101,13 @@ const Row = ({ row, setOrders, orders }) => {
                         isLoading={isLoading}
                     />
                 </TableCell>
-                <TableCell></TableCell>
-
+                <TableCell>{formatCurrency(totalPrice)}</TableCell>
+                <TableCell>
+                    <CloseIcon
+                        onClick={cancelOrder}
+                        style={{ cursor: 'pointer', marginLeft: '40px' }}
+                    />
+                </TableCell>
             </TableRow>
             <TableRow>
                 <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>

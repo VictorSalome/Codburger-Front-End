@@ -65,15 +65,10 @@ const EditProduct = () => {
         }, 2000);
 
 
-        console.log(productDataFormData)
+
 
 
     }
-
-    //preciso que crie uma função que delete o produto que eu estiver editando e redirecionar para a lista de produtos com o toast de mensagem
-
-  
-
 
 
 
@@ -157,7 +152,7 @@ const EditProduct = () => {
                     <Label>Produto em oferta?</Label>
                 </ContainerInput>
                 <ButtonStyles type='submit'>Editar produto</ButtonStyles>
-              
+
             </form>
         </Container >
 

@@ -30,6 +30,11 @@ const status = [
         label: 'Pedido entregue',
         value: 'Pedido entregue',
     },
+    {
+        id: 7,
+        label: 'Cancelado',
+        value: 'Cancelado',
+    },
 
 ]
 

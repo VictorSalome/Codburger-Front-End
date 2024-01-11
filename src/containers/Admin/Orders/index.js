@@ -109,6 +109,8 @@ const Orders = () => {
                             <TableCell>Cliente</TableCell>
                             <TableCell>Data do pedido</TableCell>
                             <TableCell>Status</TableCell>
+                            <TableCell>Total do pedido</TableCell>
+                            <TableCell>Cancelar pedido</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
