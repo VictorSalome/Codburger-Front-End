@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# 🍔 CodeBurger - Aplicação de E-commerce para Hamburgueria
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="./src/assets/Logo.svg" alt="Logo CodeBurger" width="200"/>
+</p>
 
-## Available Scripts
+## 📋 Sobre o Projeto
 
-In the project directory, you can run:
+O CodeBurger é uma aplicação web completa para gerenciamento de pedidos de uma hamburgueria, desenvolvida com React.js. A plataforma oferece uma experiência de usuário intuitiva tanto para clientes quanto para administradores, permitindo a visualização de produtos, realização de pedidos e gestão completa do negócio.
 
-### `npm start`
+## 🚀 Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 👤 Área do Cliente
+- Autenticação de usuários (login/cadastro)
+- Navegação por categorias de produtos
+- Visualização de ofertas especiais
+- Adição de produtos ao carrinho
+- Gerenciamento de itens no carrinho (aumentar/diminuir quantidade)
+- Finalização de pedidos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 👨‍💼 Área Administrativa
+- Dashboard para gestão de pedidos
+- Listagem, criação, edição e exclusão de produtos
+- Atualização de status de pedidos
+- Visualização detalhada dos pedidos realizados
 
-### `npm test`
+## 🛠️ Tecnologias Utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React.js** - Biblioteca JavaScript para construção de interfaces
+- **React Router** - Gerenciamento de rotas na aplicação
+- **Styled Components** - Estilização de componentes com CSS-in-JS
+- **Axios** - Cliente HTTP para requisições à API
+- **React Hook Form** - Gerenciamento de formulários
+- **Yup** - Validação de dados
+- **React Toastify** - Notificações visuais
+- **React Elastic Carousel** - Componente de carrossel
+- **Material UI** - Componentes de interface de usuário
+- **Context API** - Gerenciamento de estado global
 
-### `npm run build`
+## 📱 Layout Responsivo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A aplicação foi desenvolvida com foco na experiência do usuário, apresentando um design moderno e responsivo que se adapta a diferentes tamanhos de tela.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔒 Autenticação e Segurança
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Implementação de autenticação JWT (JSON Web Token) para garantir a segurança das rotas e dados dos usuários, com controle de acesso para áreas administrativas.
 
-### `npm run eject`
+## 🔄 Integração com Backend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+A aplicação se integra perfeitamente com uma API RESTful, permitindo operações completas de CRUD (Create, Read, Update, Delete) para gerenciamento de produtos e pedidos.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Como executar o projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# Clone este repositório
+$ git clone https://github.com/seu-usuario/codburger-frontend.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Acesse a pasta do projeto
+$ cd codburger-frontend
 
-## Learn More
+# Instale as dependências
+$ npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Execute a aplicação
+$ npm run dev
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+```
 
-### Code Splitting
+## 🧠 Aprendizados e Desafios
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+O desenvolvimento deste projeto envolveu a aplicação de conceitos avançados de React, como:
 
-### Analyzing the Bundle Size
+- Gerenciamento de estado global com Context API
+- Implementação de rotas privadas e controle de acesso
+- Integração com APIs externas
+- Validação de formulários
+- Persistência de dados com localStorage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📝 Licença
 
-### Making a Progressive Web App
+Este projeto está sob a licença MIT.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center"><strong>👨‍💻 Desenvolvido com paixão e código limpo</strong></p>
+<p align="center">Este projeto demonstra minhas habilidades em React, arquitetura de software e desenvolvimento de interfaces modernas.</p>
+<p align="center">👋 Estou disponível para novas oportunidades! Entre em contato: seu-email@exemplo.com</p>
