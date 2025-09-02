@@ -93,19 +93,7 @@ $ npm run dev
 - NPM ou Yarn
 - API CodeBurger rodando (backend)
 
-## 📱 Demonstração
 
-<div align="center">
-  <img src="https://via.placeholder.com/800x400?text=Tela+Inicial+CodeBurger" alt="Tela inicial" width="800"/>
-  <p><i>Tela inicial da aplicação</i></p>
-  
-  <br/>
-  
-  <img src="https://via.placeholder.com/800x400?text=Área+Administrativa+CodeBurger" alt="Área administrativa" width="800"/>
-  <p><i>Painel administrativo</i></p>
-</div>
-
-> **Nota:** Substitua as imagens de placeholder acima por capturas de tela reais do seu projeto.
 
 ## 🔄 Próximos Passos e Melhorias
 
@@ -121,12 +109,12 @@ $ npm run dev
 
 <div align="center">
 
-**Desenvolvido por [Seu Nome]**
+**Desenvolvido por Victor Salome**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/seu-perfil/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github)](https://github.com/seu-usuario)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/victor-salome/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github)](https://github.com/victorsalome)
 
-📧 **E-mail:** seu-email@exemplo.com
+📧 **E-mail:** victorsalome41@hotmail.com
 
 </div>
 
